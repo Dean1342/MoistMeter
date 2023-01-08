@@ -18,7 +18,7 @@ async def on_message(message):
                 if words[1] == "total":
                     count = 0
                     
-                    with open("C:/Users/deann/Code/Discord/MoistMeterBot/moisture.csv", "r") as csv_file:
+                    with open("/path/to/data/moisture.csv", "r") as csv_file:
                         reader = csv.reader(csv_file)
                         next(reader)
                         for row in reader:
@@ -33,7 +33,7 @@ async def on_message(message):
                     
                     matches = []
                     
-                    with open("C:/Users/deann/Code/Discord/MoistMeterBot/moisture.csv", "r") as csv_file:
+                    with open("/path/to/data/moisture.csv", "r") as csv_file:
                         reader = csv.reader(csv_file)
                         for row in reader:
                             if search_term in row[0].lower():
